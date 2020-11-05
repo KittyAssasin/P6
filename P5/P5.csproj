@@ -60,6 +60,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppUser.cs" />
+    <Compile Include="FakeIssueRepository.cs" />
+    <Compile Include="FakeIssueStatusRepository.cs" />
+    <Compile Include="FormIssueDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueDashboard.Designer.cs">
+      <DependentUpon>FormIssueDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIssueModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueModify.Designer.cs">
+      <DependentUpon>FormIssueModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIssueSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueSelect.Designer.cs">
+      <DependentUpon>FormIssueSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIssueRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueRecord.Designer.cs">
+      <DependentUpon>FormIssueRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IIssueRepository.cs" />
+    <Compile Include="IIssueStatusRepository.cs" />
+    <Compile Include="Issue.cs" />
     <Compile Include="FakeAppUserRepository.cs" />
     <Compile Include="FakePreferenceRepository.cs" />
     <Compile Include="FakeProjectRepository.cs" />
@@ -84,6 +113,7 @@
     <Compile Include="FormModifyProject.Designer.cs">
       <DependentUpon>FormModifyProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueStatus.cs" />
     <Compile Include="Preference.cs" />
     <Compile Include="FormCreateProject.cs">
       <SubType>Form</SubType>
@@ -106,6 +136,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormIssueDashboard.resx">
+      <DependentUpon>FormIssueDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueModify.resx">
+      <DependentUpon>FormIssueModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueSelect.resx">
+      <DependentUpon>FormIssueSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueRecord.resx">
+      <DependentUpon>FormIssueRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
