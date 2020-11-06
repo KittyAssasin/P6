@@ -31,17 +31,17 @@
             this.lblIdText = new System.Windows.Forms.Label();
             this.txtBoxId = new System.Windows.Forms.TextBox();
             this.lblTitleText = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle = new System.Windows.Forms.TextBox();
             this.lblDiscoveryDateText = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lblDiscovererText = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxDiscoverer = new System.Windows.Forms.ComboBox();
             this.lblComponentText = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxComponent = new System.Windows.Forms.TextBox();
             this.lblStatusText = new System.Windows.Forms.Label();
-            this.cmbBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.lblInitialDescriptionText = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBoxDescription = new System.Windows.Forms.TextBox();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -74,12 +74,12 @@
             this.lblTitleText.TabIndex = 2;
             this.lblTitleText.Text = "Title:";
             // 
-            // textBox1
+            // txtBoxTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(193, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(425, 29);
-            this.textBox1.TabIndex = 3;
+            this.txtBoxTitle.Location = new System.Drawing.Point(193, 99);
+            this.txtBoxTitle.Name = "txtBoxTitle";
+            this.txtBoxTitle.Size = new System.Drawing.Size(425, 29);
+            this.txtBoxTitle.TabIndex = 3;
             // 
             // lblDiscoveryDateText
             // 
@@ -90,12 +90,12 @@
             this.lblDiscoveryDateText.TabIndex = 4;
             this.lblDiscoveryDateText.Text = "Discovery Date:";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(193, 141);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(425, 29);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker.Location = new System.Drawing.Point(193, 141);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(425, 29);
+            this.dateTimePicker.TabIndex = 5;
             // 
             // lblDiscovererText
             // 
@@ -106,13 +106,14 @@
             this.lblDiscovererText.TabIndex = 6;
             this.lblDiscovererText.Text = "Discoverer:";
             // 
-            // comboBox1
+            // comboBoxDiscoverer
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(193, 182);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(425, 32);
-            this.comboBox1.TabIndex = 7;
+            this.comboBoxDiscoverer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDiscoverer.FormattingEnabled = true;
+            this.comboBoxDiscoverer.Location = new System.Drawing.Point(193, 182);
+            this.comboBoxDiscoverer.Name = "comboBoxDiscoverer";
+            this.comboBoxDiscoverer.Size = new System.Drawing.Size(425, 32);
+            this.comboBoxDiscoverer.TabIndex = 7;
             // 
             // lblComponentText
             // 
@@ -123,12 +124,12 @@
             this.lblComponentText.TabIndex = 8;
             this.lblComponentText.Text = "Component:";
             // 
-            // textBox2
+            // txtBoxComponent
             // 
-            this.textBox2.Location = new System.Drawing.Point(193, 223);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(425, 29);
-            this.textBox2.TabIndex = 9;
+            this.txtBoxComponent.Location = new System.Drawing.Point(193, 223);
+            this.txtBoxComponent.Name = "txtBoxComponent";
+            this.txtBoxComponent.Size = new System.Drawing.Size(425, 29);
+            this.txtBoxComponent.TabIndex = 9;
             // 
             // lblStatusText
             // 
@@ -139,13 +140,14 @@
             this.lblStatusText.TabIndex = 10;
             this.lblStatusText.Text = "Status:";
             // 
-            // cmbBoxStatus
+            // comboBoxStatus
             // 
-            this.cmbBoxStatus.FormattingEnabled = true;
-            this.cmbBoxStatus.Location = new System.Drawing.Point(193, 268);
-            this.cmbBoxStatus.Name = "cmbBoxStatus";
-            this.cmbBoxStatus.Size = new System.Drawing.Size(425, 32);
-            this.cmbBoxStatus.TabIndex = 11;
+            this.comboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(193, 268);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(425, 32);
+            this.comboBoxStatus.TabIndex = 11;
             // 
             // lblInitialDescriptionText
             // 
@@ -156,13 +158,13 @@
             this.lblInitialDescriptionText.TabIndex = 12;
             this.lblInitialDescriptionText.Text = "Initial Description";
             // 
-            // textBox3
+            // txtBoxDescription
             // 
-            this.textBox3.Location = new System.Drawing.Point(72, 401);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(546, 326);
-            this.textBox3.TabIndex = 13;
+            this.txtBoxDescription.Location = new System.Drawing.Point(72, 401);
+            this.txtBoxDescription.Multiline = true;
+            this.txtBoxDescription.Name = "txtBoxDescription";
+            this.txtBoxDescription.Size = new System.Drawing.Size(546, 326);
+            this.txtBoxDescription.TabIndex = 13;
             // 
             // btnModify
             // 
@@ -193,17 +195,17 @@
             this.ClientSize = new System.Drawing.Size(683, 868);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnModify);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.lblInitialDescriptionText);
-            this.Controls.Add(this.cmbBoxStatus);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.lblStatusText);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBoxComponent);
             this.Controls.Add(this.lblComponentText);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxDiscoverer);
             this.Controls.Add(this.lblDiscovererText);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.lblDiscoveryDateText);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxTitle);
             this.Controls.Add(this.lblTitleText);
             this.Controls.Add(this.txtBoxId);
             this.Controls.Add(this.lblIdText);
@@ -220,17 +222,17 @@
         private System.Windows.Forms.Label lblIdText;
         private System.Windows.Forms.TextBox txtBoxId;
         private System.Windows.Forms.Label lblTitleText;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxTitle;
         private System.Windows.Forms.Label lblDiscoveryDateText;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label lblDiscovererText;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxDiscoverer;
         private System.Windows.Forms.Label lblComponentText;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxComponent;
         private System.Windows.Forms.Label lblStatusText;
-        private System.Windows.Forms.ComboBox cmbBoxStatus;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label lblInitialDescriptionText;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBoxDescription;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnCancel;
     }
