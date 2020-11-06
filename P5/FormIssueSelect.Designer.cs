@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSelect = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiscoveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,11 +36,15 @@
             this.colInitialDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colComponent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -53,29 +55,13 @@
             this.colComponent,
             this.colStatus});
             this.dataGridView1.Location = new System.Drawing.Point(50, 33);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 72;
             this.dataGridView1.RowTemplate.Height = 31;
             this.dataGridView1.Size = new System.Drawing.Size(1250, 308);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Location = new System.Drawing.Point(1095, 373);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(205, 61);
-            this.btnSelect.TabIndex = 1;
-            this.btnSelect.Text = "Select Issue";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(847, 373);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(205, 61);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // colId
             // 
@@ -133,7 +119,27 @@
             this.colStatus.ReadOnly = true;
             this.colStatus.Width = 175;
             // 
-            // FormIssueModifySelect
+            // btnSelect
+            // 
+            this.btnSelect.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSelect.Location = new System.Drawing.Point(1095, 373);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(205, 61);
+            this.btnSelect.TabIndex = 1;
+            this.btnSelect.Text = "Select Issue";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(847, 373);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(205, 61);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // FormIssueSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +147,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FormIssueModifySelect";
+            this.Name = "FormIssueSelect";
             this.Text = "Select Issue";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -8,30 +8,53 @@ namespace Builder
 {
     class FakeIssueStatusRepository : IIssueStatusRepository
     {
-        private static List<IssueStatus> IssueStatuses = new List<IssueStatus>();
+        private static List<IssueStatus> _IssueStatuses = new List<IssueStatus>();
 
         public FakeIssueStatusRepository()
         {
-            
+            if (_IssueStatuses.Count == 0)
+            {
+                Add(0, "Open");
+                Add(1, "Assigned");
+                Add(2, "Fixed");
+                Add(3, "Closed - Won't fix");
+                Add(4, "Closed - Fixed");
+                Add(5, "Closed - by design");
+            }
         }
         public void Add(int Id, string value)
         {
-            throw new NotImplementedException();
+            _IssueStatuses.Add(new IssueStatus { Id = Id, Value = value });
         }
 
         public List<IssueStatus> GetAll()
         {
-            throw new NotImplementedException();
+            List<IssueStatus> issueStatuses = new List<IssueStatus>();
+            foreach (IssueStatus issueStatus in _IssueStatuses)
+            {
+                issueStatuses.Add(issueStatus);
+            }
+            return issueStatuses;
         }
 
         public int GetIdByStatus(string value)
         {
-            throw new NotImplementedException();
+            foreach (IssueStatus issueStatus in _IssueStatuses)
+            {
+                if (issueStatus.Value == value)
+                    return issueStatus.Id;
+            }
+            return -1;
         }
 
         public string GetValueById(int Id)
         {
-            throw new NotImplementedException();
+            foreach (IssueStatus issueStatus in _IssueStatuses)
+            {
+                if (issueStatus.Id == Id)
+                    return issueStatus.Value;
+            }
+            return "";
         }
     }
 }
