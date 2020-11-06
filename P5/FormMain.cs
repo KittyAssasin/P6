@@ -121,15 +121,30 @@ namespace P5
         {
             FormIssueSelect selectForm = new FormIssueSelect(_CurrentProject);
             selectForm.ShowDialog();
-            FormIssueModify modifyForm = new FormIssueModify(selectForm.selectedIssue);
+            if (selectForm.selectedIssue != null)
+            {
+                FormIssueModify modifyForm = new FormIssueModify(selectForm.selectedIssue);
+                modifyForm.ShowDialog();
+                modifyForm.Dispose();
+            }
             selectForm.Dispose();
-            modifyForm.ShowDialog();
-            modifyForm.Dispose();
         }
 
         private void issuesRemoveToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            
+            FakeIssueRepository fIR = new FakeIssueRepository();
+            FormIssueSelect selectForm = new FormIssueSelect(_CurrentProject);
+            selectForm.ShowDialog();
+            if (selectForm.selectedIssue != null)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to remove: " + selectForm.selectedIssue.Title + "?",
+                    "Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                    fIR.Remove(selectForm.selectedIssue);
+                else
+                    MessageBox.Show("Removal Canceled", "Confirmation");
+            }
+            selectForm.Dispose();
         }
     }
 }
