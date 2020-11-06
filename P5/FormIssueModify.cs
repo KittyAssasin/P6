@@ -12,9 +12,26 @@ namespace Builder
 {
     public partial class FormIssueModify : Form
     {
-        public FormIssueModify()
+        Issue toModify;
+        public FormIssueModify(Issue issue)
         {
             InitializeComponent();
+            toModify = issue;
+        }
+
+        private void FormIssueModify_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

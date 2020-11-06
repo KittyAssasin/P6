@@ -22,12 +22,23 @@ namespace Builder
                 // Populate some temporary values to work with
                 Add(new Issue
                 {
-                    Id = 0,
-                    ProjectId = 0,
+                    Id = 1,
+                    ProjectId = 1,
                     Title = "TestTitle",
                     DiscoveryDate = DateTime.Now,
-                    Discoverer = "dave",
+                    Discoverer = "Bishop, Dave",
                     InitialDescription = "Lol there's a problem",
+                    Component = "Super critical component",
+                    IssueStatusId = 0
+                });
+                Add(new Issue
+                {
+                    Id = 2,
+                    ProjectId = 1,
+                    Title = "Te",
+                    DiscoveryDate = DateTime.Now,
+                    Discoverer = "Bishop, Dave",
+                    InitialDescription = "Lol a problem",
                     Component = "Super critical component",
                     IssueStatusId = 0
                 });
@@ -170,9 +181,9 @@ namespace Builder
             }
             return false;
         }
-        private int GetNextId()
+        public int GetNextId()
         {
-            int currentMaxId = -1;
+            int currentMaxId = 0;
             foreach (Issue i in _Issues)
             {
                 if (currentMaxId < i.Id)

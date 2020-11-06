@@ -112,16 +112,19 @@ namespace P5
 
         private void issuesRecordToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormIssueRecord form = new FormIssueRecord();
+            FormIssueRecord form = new FormIssueRecord(_CurrentProject);
             form.ShowDialog();
             form.Dispose();
         }
 
         private void issuesModifyToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormIssueModify form = new FormIssueModify();
-            form.ShowDialog();
-            form.Dispose();
+            FormIssueSelect selectForm = new FormIssueSelect(_CurrentProject);
+            selectForm.ShowDialog();
+            FormIssueModify modifyForm = new FormIssueModify(selectForm.selectedIssue);
+            selectForm.Dispose();
+            modifyForm.ShowDialog();
+            modifyForm.Dispose();
         }
 
         private void issuesRemoveToolStripMenuItem_Click(object sender, System.EventArgs e)

@@ -173,6 +173,7 @@
             this.btnModify.TabIndex = 14;
             this.btnModify.Text = "Modify Issue";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnCancel
             // 
@@ -183,6 +184,7 @@
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FormIssueModify
             // 
@@ -207,6 +209,7 @@
             this.Controls.Add(this.lblIdText);
             this.Name = "FormIssueModify";
             this.Text = "Modify Issue";
+            this.Load += new System.EventHandler(this.FormIssueModify_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

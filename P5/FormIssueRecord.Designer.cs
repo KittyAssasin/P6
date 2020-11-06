@@ -37,13 +37,13 @@
             this.txtBoxId = new System.Windows.Forms.TextBox();
             this.txtBoxTitle = new System.Windows.Forms.TextBox();
             this.dateTimePickerDiscoveryDate = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxDiscoverer = new System.Windows.Forms.ComboBox();
             this.txtBoxComponent = new System.Windows.Forms.TextBox();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.lblDescriptionText = new System.Windows.Forms.Label();
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreateIssue = new System.Windows.Forms.Button();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxDiscoverer = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblIdText
@@ -61,7 +61,7 @@
             this.lblTitleText.Location = new System.Drawing.Point(132, 102);
             this.lblTitleText.Name = "lblTitleText";
             this.lblTitleText.Size = new System.Drawing.Size(55, 25);
-            this.lblTitleText.TabIndex = 1;
+            this.lblTitleText.TabIndex = 0;
             this.lblTitleText.Text = "Title:";
             // 
             // lblDiscoveryText
@@ -70,7 +70,7 @@
             this.lblDiscoveryText.Location = new System.Drawing.Point(37, 141);
             this.lblDiscoveryText.Name = "lblDiscoveryText";
             this.lblDiscoveryText.Size = new System.Drawing.Size(150, 25);
-            this.lblDiscoveryText.TabIndex = 2;
+            this.lblDiscoveryText.TabIndex = 0;
             this.lblDiscoveryText.Text = "Discovery Date:";
             // 
             // lblDiscovererText
@@ -79,7 +79,7 @@
             this.lblDiscovererText.Location = new System.Drawing.Point(76, 182);
             this.lblDiscovererText.Name = "lblDiscovererText";
             this.lblDiscovererText.Size = new System.Drawing.Size(111, 25);
-            this.lblDiscovererText.TabIndex = 3;
+            this.lblDiscovererText.TabIndex = 0;
             this.lblDiscovererText.Text = "Discoverer:";
             // 
             // lblComponentText
@@ -88,7 +88,7 @@
             this.lblComponentText.Location = new System.Drawing.Point(67, 223);
             this.lblComponentText.Name = "lblComponentText";
             this.lblComponentText.Size = new System.Drawing.Size(120, 25);
-            this.lblComponentText.TabIndex = 4;
+            this.lblComponentText.TabIndex = 0;
             this.lblComponentText.Text = "Component:";
             // 
             // lblStatusText
@@ -97,7 +97,7 @@
             this.lblStatusText.Location = new System.Drawing.Point(113, 268);
             this.lblStatusText.Name = "lblStatusText";
             this.lblStatusText.Size = new System.Drawing.Size(74, 25);
-            this.lblStatusText.TabIndex = 5;
+            this.lblStatusText.TabIndex = 0;
             this.lblStatusText.Text = "Status:";
             // 
             // txtBoxId
@@ -108,7 +108,7 @@
             this.txtBoxId.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBoxId.ShortcutsEnabled = false;
             this.txtBoxId.Size = new System.Drawing.Size(76, 29);
-            this.txtBoxId.TabIndex = 6;
+            this.txtBoxId.TabIndex = 0;
             this.txtBoxId.Text = "-1";
             this.txtBoxId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -117,37 +117,21 @@
             this.txtBoxTitle.Location = new System.Drawing.Point(193, 99);
             this.txtBoxTitle.Name = "txtBoxTitle";
             this.txtBoxTitle.Size = new System.Drawing.Size(425, 29);
-            this.txtBoxTitle.TabIndex = 7;
+            this.txtBoxTitle.TabIndex = 1;
             // 
             // dateTimePickerDiscoveryDate
             // 
             this.dateTimePickerDiscoveryDate.Location = new System.Drawing.Point(193, 141);
             this.dateTimePickerDiscoveryDate.Name = "dateTimePickerDiscoveryDate";
             this.dateTimePickerDiscoveryDate.Size = new System.Drawing.Size(425, 29);
-            this.dateTimePickerDiscoveryDate.TabIndex = 8;
-            // 
-            // comboBoxDiscoverer
-            // 
-            this.comboBoxDiscoverer.FormattingEnabled = true;
-            this.comboBoxDiscoverer.Location = new System.Drawing.Point(193, 182);
-            this.comboBoxDiscoverer.Name = "comboBoxDiscoverer";
-            this.comboBoxDiscoverer.Size = new System.Drawing.Size(425, 32);
-            this.comboBoxDiscoverer.TabIndex = 9;
+            this.dateTimePickerDiscoveryDate.TabIndex = 2;
             // 
             // txtBoxComponent
             // 
             this.txtBoxComponent.Location = new System.Drawing.Point(193, 223);
             this.txtBoxComponent.Name = "txtBoxComponent";
             this.txtBoxComponent.Size = new System.Drawing.Size(425, 29);
-            this.txtBoxComponent.TabIndex = 10;
-            // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(193, 268);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(425, 32);
-            this.comboBoxStatus.TabIndex = 11;
+            this.txtBoxComponent.TabIndex = 4;
             // 
             // lblDescriptionText
             // 
@@ -155,7 +139,7 @@
             this.lblDescriptionText.Location = new System.Drawing.Point(37, 364);
             this.lblDescriptionText.Name = "lblDescriptionText";
             this.lblDescriptionText.Size = new System.Drawing.Size(158, 25);
-            this.lblDescriptionText.TabIndex = 12;
+            this.lblDescriptionText.TabIndex = 0;
             this.lblDescriptionText.Text = "Initial Description";
             // 
             // txtBoxDescription
@@ -164,7 +148,7 @@
             this.txtBoxDescription.Multiline = true;
             this.txtBoxDescription.Name = "txtBoxDescription";
             this.txtBoxDescription.Size = new System.Drawing.Size(546, 326);
-            this.txtBoxDescription.TabIndex = 13;
+            this.txtBoxDescription.TabIndex = 6;
             // 
             // btnCancel
             // 
@@ -172,19 +156,40 @@
             this.btnCancel.Location = new System.Drawing.Point(72, 771);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(205, 61);
-            this.btnCancel.TabIndex = 14;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreateIssue
             // 
-            this.btnCreateIssue.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnCreateIssue.Location = new System.Drawing.Point(413, 771);
             this.btnCreateIssue.Name = "btnCreateIssue";
             this.btnCreateIssue.Size = new System.Drawing.Size(205, 61);
-            this.btnCreateIssue.TabIndex = 15;
+            this.btnCreateIssue.TabIndex = 7;
             this.btnCreateIssue.Text = "Create Issue";
             this.btnCreateIssue.UseVisualStyleBackColor = true;
+            this.btnCreateIssue.Click += new System.EventHandler(this.btnCreateIssue_Click);
+            // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.AllowDrop = true;
+            this.comboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(193, 268);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(425, 32);
+            this.comboBoxStatus.TabIndex = 5;
+            // 
+            // comboBoxDiscoverer
+            // 
+            this.comboBoxDiscoverer.AllowDrop = true;
+            this.comboBoxDiscoverer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDiscoverer.FormattingEnabled = true;
+            this.comboBoxDiscoverer.Location = new System.Drawing.Point(193, 182);
+            this.comboBoxDiscoverer.Name = "comboBoxDiscoverer";
+            this.comboBoxDiscoverer.Size = new System.Drawing.Size(425, 32);
+            this.comboBoxDiscoverer.TabIndex = 3;
             // 
             // FormIssueRecord
             // 
@@ -209,6 +214,7 @@
             this.Controls.Add(this.lblIdText);
             this.Name = "FormIssueRecord";
             this.Text = "Record Issue";
+            this.Load += new System.EventHandler(this.FormIssueRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,12 +231,12 @@
         private System.Windows.Forms.TextBox txtBoxId;
         private System.Windows.Forms.TextBox txtBoxTitle;
         private System.Windows.Forms.DateTimePicker dateTimePickerDiscoveryDate;
-        private System.Windows.Forms.ComboBox comboBoxDiscoverer;
         private System.Windows.Forms.TextBox txtBoxComponent;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label lblDescriptionText;
         private System.Windows.Forms.TextBox txtBoxDescription;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreateIssue;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.ComboBox comboBoxDiscoverer;
     }
 }
