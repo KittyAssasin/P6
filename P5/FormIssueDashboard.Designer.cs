@@ -46,6 +46,7 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblTotalIssuesText
             // 
@@ -73,7 +74,6 @@
             this.lblIssuesMonthText.Size = new System.Drawing.Size(155, 25);
             this.lblIssuesMonthText.TabIndex = 3;
             this.lblIssuesMonthText.Text = "Issues by Month";
-            this.lblIssuesMonthText.Click += new System.EventHandler(this.lblIssuesByMonthLabel_Click);
             // 
             // lstBoxIssuesbyMonth
             // 
@@ -116,6 +116,7 @@
             this.Controls.Add(this.btnClose);
             this.Name = "FormIssueDashboard";
             this.Text = "Issue Dashboard";
+            this.Load += new System.EventHandler(this.FormIssueDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

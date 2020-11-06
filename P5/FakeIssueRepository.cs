@@ -26,7 +26,7 @@ namespace Builder
                     ProjectId = 0,
                     Title = "TestTitle",
                     DiscoveryDate = DateTime.Now,
-                    Discoverer = "Beans",
+                    Discoverer = "dave",
                     InitialDescription = "Lol there's a problem",
                     Component = "Super critical component",
                     IssueStatusId = 0

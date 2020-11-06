@@ -1,4 +1,5 @@
 ﻿using Builder;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace P5
@@ -6,6 +7,7 @@ namespace P5
     public partial class FormMain : Form
     {
         private AppUser _CurrentAppUser = new AppUser();
+        private Project _CurrentProject;
         public FormMain()
         {
             InitializeComponent();
@@ -35,7 +37,8 @@ namespace P5
                 return;
             }
             this.Text = "Main - No Project Selected";
-            while (selectAProject() == "")
+            string selectedProjectName = selectAProject();
+            while (selectedProjectName == "")
             {
                 DialogResult result = MessageBox.Show("A project must be selected.", "Attention", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.Cancel)
@@ -44,11 +47,24 @@ namespace P5
                     return;
                 }
             }
+            FakeProjectRepository FPR = new FakeProjectRepository();
+            List<Project> projects = FPR.GetAll();
+            foreach (Project p in projects)
+                if (p.Name == selectedProjectName)
+                    _CurrentProject = p;
         }
 
         private void preferencesSelectProjectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            selectAProject();
+            string selectedProjectName = selectAProject();
+            if (selectedProjectName != "")
+            {
+                FakeProjectRepository FPR = new FakeProjectRepository();
+                List<Project> projects = FPR.GetAll();
+                foreach (Project p in projects)
+                    if (p.Name == selectedProjectName)
+                        _CurrentProject = p;
+            }
         }
 
         private string selectAProject()
@@ -86,10 +102,10 @@ namespace P5
             form.ShowDialog();
             form.Dispose();
         }
-
+        //P6
         private void issuesDashboardToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormIssueDashboard form = new FormIssueDashboard();
+            FormIssueDashboard form = new FormIssueDashboard(_CurrentProject);
             form.ShowDialog();
             form.Dispose();
         }
